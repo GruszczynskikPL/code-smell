@@ -9,7 +9,7 @@ import javax.annotation.Nonnull;
  */
 public class CustomerReport {
 
-    private static final String accountIBANPrefix = "Account IBAN: ";
+    private static final String accountIBANPrefix = "Account: IBAN: ";
     private final Customer customer;
     private final Account account;
 
