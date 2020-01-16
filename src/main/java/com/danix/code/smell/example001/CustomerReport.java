@@ -9,7 +9,7 @@ import javax.annotation.Nonnull;
  */
 public class CustomerReport {
 
-    private static final String accountIBANPrefix = "Account: IBAN: ";
+    private static final String accountPrefix = "Account: IBAN: ";
     private final Customer customer;
     private final Account account;
 
@@ -21,7 +21,7 @@ public class CustomerReport {
     public String printCustomerDaysOverdrawn() {
         String fullName = customer.getFullName();
 
-        String accountDescription = accountIBANPrefix + account.getIban() + ", Days Overdrawn: "
+        String accountDescription = accountPrefix + account.getIban() + ", Days Overdrawn: "
                 + account.getDaysOverdrawn();
         return fullName + accountDescription;
     }
@@ -29,12 +29,12 @@ public class CustomerReport {
     public String printCustomerMoney() {
         String fullName = customer.getFullName();
         String accountDescription = "";
-        accountDescription += accountIBANPrefix + account.getIban() + ", Money: " + account.getMoneyAmount();
+        accountDescription += accountPrefix + account.getIban() + ", Money: " + account.getMoneyAmount();
         return fullName + accountDescription;
     }
 
     public String printCustomerAccount() {
-        return accountIBANPrefix + account.getIban() + ", Money: " + account.getMoneyAmount() + ", Account type: "
+        return accountPrefix + account.getIban() + ", Money: " + account.getMoneyAmount() + ", Account type: "
                 + account.getType();
     }
 
