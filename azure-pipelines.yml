@@ -33,11 +33,3 @@ steps:
     sqMavenPluginVersionChoice: 'latest'
     checkStyleRunAnalysis: true
     goals: 'package'
-- task: codecoveragecomparerbt@1
-  inputs:
-    codecoveragetarget: '100'
-    codecoveragemeasurementmethod: 'Line'
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: 'coverage.xml'
