@@ -34,3 +34,7 @@ steps:
     sqMavenPluginVersionChoice: 'latest'
     checkStyleRunAnalysis: true
     goals: 'package'
+- task: codecoveragecomparerbt@1
+  inputs:
+    codecoveragetarget: '100'
+    codecoveragemeasurementmethod: 'Line'
